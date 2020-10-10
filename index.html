@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>A Simple To-do-list</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="page-top">
+    <div class="page-content">
+        <h2>To Do List</h2>
+    </div>
+    </div>
+	<div id="vue-todolist" class="todolistDiv">
+        <div style="text-align:center;vertical-align:middle;">
+            <input placeholder="例如：认真学习30分钟 ；提示:按下回车键即可添加至清单！" class="ipt" type="text" v-model="inputValue" v-on:keyup.enter="add"/>
+        </div>
+        <div style="text-align:center;vertical-align:middle;">
+            <button v-on:click="add" class="btn1">add</button>
+        </div>
+		<ul>
+			<li v-for="item in items" >
+			<div class="liDiv">
+				<input type="checkbox" v-model="item.completed">
+				<label  v-bind:class="{ complete:item.completed }">{{item.text}}</label>
+                <button v-on:click="remove(item)" class="btn">x</button></li>
+			</div>
+		</ul>
+	</div>
+	
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="vue-resource.js"></script>
+	<script src="index.js"></script>
+
+</body>
+</html>

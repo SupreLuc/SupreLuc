@@ -1,5 +1,7 @@
 ### Hi there 👋
-This is a simple To-Do-List, you can add tasks or delete them, your elements will be stored in localstorage so you don't need to worry about losing them.
+This is a simple To-Do-List.
+
+You can add tasks or delete them, your elements will be stored in localstorage so you don't need to worry about losing them.
 
 Welcome to give me any advice~
 
